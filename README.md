@@ -1,36 +1,36 @@
 # Request Header Parser Microservice
 
-A microservice that parses HTTP request headers and returns client information including IP address, language preference, and user agent software.
+Sebuah microservice yang mem-parsing HTTP request headers dan mengembalikan informasi klien termasuk alamat IP, preferensi bahasa, dan software user agent.
 
-## 🚀 Features
+## 🚀 Fitur
 
-- Parse client IP address (supports forwarded headers)
-- Extract accepted language from request headers
-- Identify user agent/browser information
-- Simple REST API with JSON response
-- CORS enabled for cross-origin requests
+- Parsing alamat IP klien (mendukung forwarded headers)
+- Ekstrak bahasa yang diterima dari request headers
+- Identifikasi informasi user agent/browser
+- REST API sederhana dengan respons JSON
+- CORS diaktifkan untuk cross-origin requests
 
-## 📁 Project Structure
+## 📁 Struktur Proyek
 
 ```text
 boilerplate-project-headerparser/
 ├── controllers/
-│   ├── home.controller.js     # Home page controller
-│   └── whoami.controller.js   # API endpoint controller
+│   ├── home.controller.js     # Controller halaman utama
+│   └── whoami.controller.js   # Controller endpoint API
 ├── public/
-│   └── style.css             # Stylesheet
+│   └── style.css             # File CSS
 ├── routes/
-│   └── route.js              # Application routes
+│   └── route.js              # Rute aplikasi
 ├── views/
-│   └── index.html            # Home page template
-├── index.js                  # Main application file
-├── package.json              # Dependencies and scripts
-└── sample.env                # Environment variables template
+│   └── index.html            # Template halaman utama
+├── index.js                  # File aplikasi utama
+├── package.json              # Dependencies dan scripts
+└── sample.env                # Template environment variables
 ```
 
-## 🛠️ Installation & Setup
+## 🛠️ Instalasi & Setup
 
-1. **Clone the repository**
+1. **Clone repository**
 
    ```bash
    git clone <repository-url>
@@ -43,34 +43,34 @@ boilerplate-project-headerparser/
    npm install
    ```
 
-3. **Set up environment variables**
+3. **Setup environment variables**
 
    ```bash
    cp sample.env .env
-   # Edit .env file with your configuration
+   # Edit file .env dengan konfigurasi Anda
    ```
 
-4. **Start the application**
+4. **Jalankan aplikasi**
 
    ```bash
    npm start
    ```
 
-The application will run on `http://localhost:3000` by default.
+Aplikasi akan berjalan di `http://localhost:3000` secara default.
 
-## 📚 API Documentation
+## 📚 Dokumentasi API
 
 ### Endpoints
 
 #### GET `/`
 
-Returns the home page with API documentation and usage examples.
+Mengembalikan halaman utama dengan dokumentasi API dan contoh penggunaan.
 
 #### GET `/api/whoami`
 
-Returns client information parsed from request headers.
+Mengembalikan informasi klien yang di-parsing dari request headers.
 
-**Response Format:**
+**Format Respons:**
 
 ```json
 {
@@ -80,19 +80,19 @@ Returns client information parsed from request headers.
 }
 ```
 
-**Response Fields:**
+**Field Respons:**
 
-- `ipaddress`: Client's IP address (supports X-Forwarded-For header)
-- `language`: Accepted languages from Accept-Language header
-- `software`: User agent string identifying the client software
+- `ipaddress`: Alamat IP klien (mendukung X-Forwarded-For header)
+- `language`: Bahasa yang diterima dari Accept-Language header
+- `software`: String user agent yang mengidentifikasi software klien
 
-### Example Usage
+### Contoh Penggunaan
 
 ```bash
-# Using curl
+# Menggunakan curl
 curl https://your-app-domain.com/api/whoami
 
-# Using fetch in JavaScript
+# Menggunakan fetch di JavaScript
 fetch('/api/whoami')
   .then(response => response.json())
   .then(data => console.log(data));
@@ -100,31 +100,31 @@ fetch('/api/whoami')
 
 ## 🧪 Testing
 
-Test the API endpoints:
+Test endpoint API:
 
 ```bash
-# Test home page
+# Test halaman utama
 curl http://localhost:3000/
 
-# Test whoami endpoint
+# Test endpoint whoami
 curl http://localhost:3000/api/whoami
 
-# Test with custom headers
+# Test dengan custom headers
 curl -H "Accept-Language: es-ES,es;q=0.9" \
      -H "User-Agent: Custom-Agent/1.0" \
      http://localhost:3000/api/whoami
 ```
 
-## 🔧 Technologies Used
+## 🔧 Teknologi Yang Digunakan
 
 - **Node.js** - Runtime environment
 - **Express.js** - Web framework
 - **CORS** - Cross-origin resource sharing
-- **dotenv** - Environment variable management
+- **dotenv** - Manajemen environment variable
 
 ## 📝 Environment Variables
 
-Create a `.env` file based on `sample.env`:
+Buat file `.env` berdasarkan `sample.env`:
 
 ```env
 PORT=3000
@@ -135,7 +135,7 @@ PORT=3000
 ### Heroku
 
 ```bash
-# Create Heroku app
+# Buat Heroku app
 heroku create your-app-name
 
 # Deploy
@@ -152,30 +152,30 @@ npm i -g vercel
 vercel
 ```
 
-## 🤝 Contributing
+## 🤝 Kontribusi
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork repository
+2. Buat feature branch (`git checkout -b feature/fitur-keren`)
+3. Commit perubahan Anda (`git commit -m 'Tambah fitur keren'`)
+4. Push ke branch (`git push origin feature/fitur-keren`)
+5. Buka Pull Request
 
-## 📄 License
+## 📄 Lisensi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail.
 
-## 🎓 Educational Purpose
+## 🎓 Tujuan Edukasi
 
-This project is part of the freeCodeCamp curriculum for learning APIs and Microservices. Learn more at [freeCodeCamp](https://www.freecodecamp.org/learn/apis-and-microservices/).
+Proyek ini adalah bagian dari kurikulum freeCodeCamp untuk mempelajari APIs dan Microservices. Pelajari lebih lanjut di [freeCodeCamp](https://www.freecodecamp.org/learn/apis-and-microservices/).
 
-## 📞 Support
+## 📞 Dukungan
 
-If you have any questions or need help, please:
+Jika Anda memiliki pertanyaan atau membutuhkan bantuan, silakan:
 
-- Open an issue on GitHub
-- Visit [freeCodeCamp Forum](https://forum.freecodecamp.org/)
-- Check the [freeCodeCamp Documentation](https://www.freecodecamp.org/learn/)
+- Buka issue di GitHub
+- Kunjungi [freeCodeCamp Forum](https://forum.freecodecamp.org/)
+- Periksa [Dokumentasi freeCodeCamp](https://www.freecodecamp.org/learn/)
 
 ---
 
-Made with ❤️ by [freeCodeCamp](https://www.freecodecamp.org) Community
+Dibuat dengan ❤️ oleh Komunitas [freeCodeCamp](https://www.freecodecamp.org)
