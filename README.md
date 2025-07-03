@@ -1,8 +1,6 @@
 # Request Header Parser Microservice
 
-Sebuah microservice yang mem-parsing HTTP request headers dan mengembalikan informasi klien termasuk alamat IP, preferensi bahasa, dan software user agent.
-
-Project ini merupakan salah satu tantangan dari freeCodeCamp Backend Development and APIs.
+Sebuah microservice yang mem-parsing HTTP request headers dan mengembalikan informasi klien termasuk alamat IP, preferensi bahasa, dan software user agent. Project ini merupakan salah satu tantangan dari freeCodeCamp Backend Development and APIs.
 
 ## 🚀 Fitur
 
